@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy to staging'){
             steps{
-                build job:'deploy-to-staging'
+                build job:'deploy_to_staging'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                     input message:'是否部署到生产环境?' 
                 }
 
-                build job: 'deploy-to-production'
+                build job: 'deploy_to_product'
             }
             post {
                 success {
